@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		411540801BEF3AE100531D08 /* KYDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4115407F1BEF3AE100531D08 /* KYDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4115408B1BEF3C7300531D08 /* KYDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411540881BEF3C7300531D08 /* KYDrawerController.swift */; };
-		4115408C1BEF3C7300531D08 /* KYEmbedDrawerControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411540891BEF3C7300531D08 /* KYEmbedDrawerControllerSegue.swift */; };
-		4115408D1BEF3C7300531D08 /* KYEmbedMainControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4115408A1BEF3C7300531D08 /* KYEmbedMainControllerSegue.swift */; };
+		4115408B1BEF3C7300531D08 /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411540881BEF3C7300531D08 /* DrawerController.swift */; };
+		4115408C1BEF3C7300531D08 /* EmbedDrawerControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411540891BEF3C7300531D08 /* EmbedDrawerControllerSegue.swift */; };
+		4115408D1BEF3C7300531D08 /* EmbedMainControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4115408A1BEF3C7300531D08 /* EmbedMainControllerSegue.swift */; };
 		411540901BEF3CAA00531D08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4115408F1BEF3CAA00531D08 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -18,9 +18,9 @@
 		4115407C1BEF3AE100531D08 /* KYDrawerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KYDrawerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4115407F1BEF3AE100531D08 /* KYDrawerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYDrawerController.h; sourceTree = "<group>"; };
 		411540811BEF3AE100531D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		411540881BEF3C7300531D08 /* KYDrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDrawerController.swift; sourceTree = "<group>"; };
-		411540891BEF3C7300531D08 /* KYEmbedDrawerControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEmbedDrawerControllerSegue.swift; sourceTree = "<group>"; };
-		4115408A1BEF3C7300531D08 /* KYEmbedMainControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEmbedMainControllerSegue.swift; sourceTree = "<group>"; };
+		411540881BEF3C7300531D08 /* DrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerController.swift; sourceTree = "<group>"; };
+		411540891BEF3C7300531D08 /* EmbedDrawerControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbedDrawerControllerSegue.swift; sourceTree = "<group>"; };
+		4115408A1BEF3C7300531D08 /* EmbedMainControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbedMainControllerSegue.swift; sourceTree = "<group>"; };
 		4115408F1BEF3CAA00531D08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -66,9 +66,9 @@
 		411540871BEF3C5500531D08 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				411540881BEF3C7300531D08 /* KYDrawerController.swift */,
-				411540891BEF3C7300531D08 /* KYEmbedDrawerControllerSegue.swift */,
-				4115408A1BEF3C7300531D08 /* KYEmbedMainControllerSegue.swift */,
+				411540881BEF3C7300531D08 /* DrawerController.swift */,
+				411540891BEF3C7300531D08 /* EmbedDrawerControllerSegue.swift */,
+				4115408A1BEF3C7300531D08 /* EmbedMainControllerSegue.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -160,9 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4115408C1BEF3C7300531D08 /* KYEmbedDrawerControllerSegue.swift in Sources */,
-				4115408B1BEF3C7300531D08 /* KYDrawerController.swift in Sources */,
-				4115408D1BEF3C7300531D08 /* KYEmbedMainControllerSegue.swift in Sources */,
+				4115408C1BEF3C7300531D08 /* EmbedDrawerControllerSegue.swift in Sources */,
+				4115408B1BEF3C7300531D08 /* DrawerController.swift in Sources */,
+				4115408D1BEF3C7300531D08 /* EmbedMainControllerSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

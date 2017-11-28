@@ -22,14 +22,14 @@ SOFTWARE.
 
 import UIKit
 
-public class KYEmbedMainControllerSegue: UIStoryboardSegue {
+public class EmbedDrawerControllerSegue: UIStoryboardSegue {
     
     final override public func perform() {
-        if let sourceViewController = source as? KYDrawerController {
-            sourceViewController.mainViewController = destination
+        if let sourceViewController = source as? DrawerController {
+            sourceViewController.drawerViewController = destination
         } else {
             assertionFailure("SourceViewController must be KYDrawerController!")
         }
     }
-    
+   
 }

@@ -22,15 +22,15 @@ SOFTWARE.
 
 import UIKit
 
-@objc public protocol KYDrawerControllerDelegate {
-    @objc optional func drawerController(_ drawerController: KYDrawerController, willChangeState state: KYDrawerController.DrawerState)
-    @objc optional func drawerController(_ drawerController: KYDrawerController, didChangeState state: KYDrawerController.DrawerState)
+@objc public protocol DrawerControllerDelegate {
+    @objc optional func drawerController(_ drawerController: DrawerController, willChangeState state: DrawerController.DrawerState)
+    @objc optional func drawerController(_ drawerController: DrawerController, didChangeState state: DrawerController.DrawerState)
 
     @objc @available(*, deprecated, renamed: "drawerController(_:didChangeState:)")
-    optional func drawerController(_ drawerController: KYDrawerController, stateChanged state: KYDrawerController.DrawerState)
+    optional func drawerController(_ drawerController: DrawerController, stateChanged state: DrawerController.DrawerState)
 }
 
-open class KYDrawerController: UIViewController, UIGestureRecognizerDelegate {
+open class DrawerController: UIViewController, UIGestureRecognizerDelegate {
     
     /**************************************************************************/
     // MARK: - Types
@@ -81,7 +81,7 @@ open class KYDrawerController: UIViewController, UIGestureRecognizerDelegate {
     public private(set) lazy var screenEdgePanGesture: UIScreenEdgePanGestureRecognizer = {
         let gesture = UIScreenEdgePanGestureRecognizer(
             target: self,
-            action: #selector(KYDrawerController.handlePanGesture(_:))
+            action: #selector(DrawerController.handlePanGesture(_:))
         )
         switch self.drawerDirection {
         case .left:     gesture.edges = .left
@@ -94,7 +94,7 @@ open class KYDrawerController: UIViewController, UIGestureRecognizerDelegate {
     public private(set) lazy var panGesture: UIPanGestureRecognizer = {
         let gesture = UIPanGestureRecognizer(
             target: self,
-            action: #selector(KYDrawerController.handlePanGesture(_:))
+            action: #selector(DrawerController.handlePanGesture(_:))
         )
         gesture.delegate = self
         return gesture
@@ -103,13 +103,13 @@ open class KYDrawerController: UIViewController, UIGestureRecognizerDelegate {
     public private(set) lazy var containerViewTapGesture: UITapGestureRecognizer = {
         let gesture = UITapGestureRecognizer(
             target: self,
-            action: #selector(KYDrawerController.didtapContainerView(_:))
+            action: #selector(DrawerController.didtapContainerView(_:))
         )
         gesture.delegate = self
         return gesture
     }()
     
-    public weak var delegate: KYDrawerControllerDelegate?
+    public weak var delegate: DrawerControllerDelegate?
     
     public var drawerDirection: DrawerDirection = .left {
         didSet {
